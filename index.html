@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Pro Package Demo — Web Development Studio</title>
+
+  <meta name="description"
+        content="Pro package demo for a modern web dev studio. Fully functional front-end e-commerce flow showing product grid, cart, and checkout." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ====== STICKY HEADER ====== -->
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <div class="site-header__brand">
+        <div class="site-header__logo-dot"></div>
+        <span class="site-header__brand-name">Studio Pro Demo</span>
+      </div>
+      <nav class="site-header__nav">
+        <a href="#features">Features</a>
+        <a href="#process">Process</a>
+        <a href="#products">Demo Store</a>
+        <a href="#checkout">Cart &amp; Checkout</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+        <a href="#checkout" class="cta site-header__cta">Start Pro Plan</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====== NEW HERO ====== -->
+    <section class="hero hero-pro">
+      <div class="wrap hero-pro__grid">
+        <div class="hero-pro__copy reveal">
+          <p class="hero-pro__kicker">Pro Package · E-commerce · Automation</p>
+          <h1 class="hero-pro__title">Launch a store that feels custom-built — not just another template.</h1>
+          <p class="hero-pro__text">
+            We design, build and wire your entire e-commerce experience: product pages, cart, checkout,
+            automations and analytics, ready for serious growth.
+          </p>
+          <div class="hero-pro__actions">
+            <a href="#checkout" class="cta">Start Pro Plan</a>
+            <button type="button" class="hero-pro__ghost" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'});">
+              View demo store
+            </button>
+          </div>
+          <div class="hero-pro__meta">
+            <div>
+              <span class="hero-pro__meta-number">20+</span>
+              <span class="hero-pro__meta-label">Pages per build</span>
+            </div>
+            <div>
+              <span class="hero-pro__meta-number">R20k+</span>
+              <span class="hero-pro__meta-label">Typical investment</span>
+            </div>
+            <div>
+              <span class="hero-pro__meta-number">4–8 weeks</span>
+              <span class="hero-pro__meta-label">Avg. timeline</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-pro__mockup reveal" aria-label="Checkout preview">
+          <div class="hero-pro__mockup-header">
+            <span>Checkout preview</span>
+            <span class="hero-pro__badge">Pro demo</span>
+          </div>
+          <div class="hero-pro__mockup-body">
+            <div class="hero-pro__line">
+              <span>Conversion Landing Page</span>
+              <span>R7,500</span>
+            </div>
+            <div class="hero-pro__line">
+              <span>E-commerce UI Kit</span>
+              <span>R11,500</span>
+            </div>
+            <div class="hero-pro__divider"></div>
+            <div class="hero-pro__line hero-pro__line--muted">
+              <span>VAT (15%)</span>
+              <span>R2,850</span>
+            </div>
+            <div class="hero-pro__line hero-pro__line--total">
+              <span>Order total</span>
+              <span>R21,850</span>
+            </div>
+            <button class="cta hero-pro__mockup-btn" type="button">
+              One-click checkout (demo)
+            </button>
+            <p class="hero-pro__hint">
+              This is a front-end prototype — in a real project we connect it to your payment provider and CRM.
+            </p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ====== FEATURES ====== -->
+    <section class="features" id="features">
+      <div class="wrap reveal">
+        <h2 class="section-title">What You Get in the Pro Package</h2>
+        <p class="section-sub">
+          A production-ready setup for serious growth: complex sites, multi-service businesses, and
+          advanced integrations across your stack.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Up to 20 Pages</h3>
+            <p>Ideal for multi-service or multi-location businesses that need depth and scalability.</p>
+          </div>
+          <div class="card">
+            <h3>Custom Components</h3>
+            <p>Bespoke sections, layouts &amp; micro-interactions tuned directly to your brand and funnel.</p>
+          </div>
+          <div class="card">
+            <h3>Full E-commerce Stack</h3>
+            <p>Catalog, cart, checkout, coupons, shipping logic and conversion tracking configured for you.</p>
+          </div>
+          <div class="card">
+            <h3>API &amp; Automation</h3>
+            <p>Integrations into CRMs, lead tools, WhatsApp, chat, analytics and automation platforms.</p>
+          </div>
+          <div class="card">
+            <h3>Performance Tuning</h3>
+            <p>Global CDN, caching, image optimisation and Lighthouse optimisation for fast load times.</p>
+          </div>
+          <div class="card">
+            <h3>3 Rounds of Revisions</h3>
+            <p>Space to iterate on complex builds until everything feels exactly right.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BUILD PROCESS ====== -->
+    <section class="showcase" id="process">
+      <div class="wrap reveal">
+        <h2 class="section-title">How We Build Your Pro Site</h2>
+        <p class="section-sub">
+          A clear, collaborative workflow from first call to launch — so you always know what’s happening next.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>1. Strategy &amp; Discovery</h3>
+            <p>We map your goals, audience, offers and tech stack, then define the sitemap and success metrics.</p>
+          </div>
+          <div class="card">
+            <h3>2. UX Flows &amp; Wireframes</h3>
+            <p>We sketch key journeys (home &gt; product &gt; checkout &gt; post-purchase) to make conversion the default.</p>
+          </div>
+          <div class="card">
+            <h3>3. Visual Design System</h3>
+            <p>We set typography, colour, components and states so your site feels cohesive and premium.</p>
+          </div>
+          <div class="card">
+            <h3>4. Build &amp; Integrations</h3>
+            <p>We implement the front-end, CMS or framework, e-commerce layer and key integrations.</p>
+          </div>
+          <div class="card">
+            <h3>5. QA, Testing &amp; Launch</h3>
+            <p>We test across devices, improve performance and ship with analytics and tracking wired up.</p>
+          </div>
+          <div class="card">
+            <h3>6. After-launch Support</h3>
+            <p>We monitor, refine and prepare a roadmap for future improvements based on real data.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== VISUAL SHOWCASE ====== -->
+  <section class="showcase" id="showcase">
+  <div class="wrap reveal">
+    <h2 class="section-title">High-end Visual Direction</h2>
+    <p class="section-sub">
+      Clean, modern, conversion-focused layouts that feel premium and trustworthy on desktop and mobile.
+    </p>
+
+    <div class="showcase-grid">
+
+      <!-- Large image -->
+      <div class="showcase-card large">
+        <img
+          src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
+          alt="Web design mockups on a desk">
+      </div>
+
+      <!-- New working gradient image -->
+      <div class="showcase-card">
+        <img
+          src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
+          alt="Modern gradient shapes and colours">
+      </div>
+
+      <!-- Team collaboration -->
+      <div class="showcase-card">
+        <img
+          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
+          alt="Team working together in an office">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- ====== DEMO STORE ====== -->
+    <section class="features" id="products">
+      <div class="wrap reveal">
+        <h2 class="section-title">Demo Store – Digital Products</h2>
+        <p class="section-sub">
+          This is a fully functional front-end demo showing how your visitors can browse, add to cart,
+          and checkout. In a real project we’d connect this to your preferred payment gateway and backend.
+        </p>
+
+        <div class="grid">
+          <!-- Product 1 -->
+          <article
+            class="card product reveal"
+            data-product-id="1"
+            data-product-name="Conversion Landing Page Template"
+            data-product-price="7500">
+            <h3>Conversion Landing Page Template</h3>
+            <p>A high-converting landing page layout perfect for launches, campaigns or paid traffic.</p>
+            <p class="product-price">R7,500</p>
+            <button type="button" class="cta product-btn" data-add-to-cart>
+              Add to cart
+            </button>
+          </article>
+
+          <!-- Product 2 -->
+          <article
+            class="card product reveal"
+            data-product-id="2"
+            data-product-name="E-commerce UI Kit"
+            data-product-price="11500">
+            <h3>E-commerce UI Kit</h3>
+            <p>Full product listing, filters, cart drawer and checkout components ready to plug in.</p>
+            <p class="product-price">R11,500</p>
+            <button type="button" class="cta product-btn" data-add-to-cart>
+              Add to cart
+            </button>
+          </article>
+
+          <!-- Product 3 -->
+          <article
+            class="card product reveal"
+            data-product-id="3"
+            data-product-name="Automation & CRM Starter Pack"
+            data-product-price="9800">
+            <h3>Automation &amp; CRM Starter Pack</h3>
+            <p>Example flows for abandoned carts, lead scoring and CRM syncing for your store.</p>
+            <p class="product-price">R9,800</p>
+            <button type="button" class="cta product-btn" data-add-to-cart>
+              Add to cart
+            </button>
+          </article>
+
+          <!-- Product 4 -->
+          <article
+            class="card product reveal"
+            data-product-id="4"
+            data-product-name="Analytics & Reporting Dashboard"
+            data-product-price="12900">
+            <h3>Analytics &amp; Reporting Dashboard</h3>
+            <p>Sales and marketing dashboard layout wired up to track the entire funnel.</p>
+            <p class="product-price">R12,900</p>
+            <button type="button" class="cta product-btn" data-add-to-cart>
+              Add to cart
+            </button>
+          </article>
+
+          <!-- Product 5 -->
+          <article
+            class="card product reveal"
+            data-product-id="5"
+            data-product-name="Membership Area Layout"
+            data-product-price="8800">
+            <h3>Membership Area Layout</h3>
+            <p>Secure content area with lesson pages, progress UI and account settings screens.</p>
+            <p class="product-price">R8,800</p>
+            <button type="button" class="cta product-btn" data-add-to-cart>
+              Add to cart
+            </button>
+          </article>
+
+          <!-- Product 6 -->
+          <article
+            class="card product reveal"
+            data-product-id="6"
+            data-product-name="Support & Help Centre Template"
+            data-product-price="6400">
+            <h3>Support &amp; Help Centre Template</h3>
+            <p>FAQ hub, ticket intake and knowledge base UI to keep support scalable.</p>
+            <p class="product-price">R6,400</p>
+            <button type="button" class="cta product-btn" data-add-to-cart>
+              Add to cart
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PRICING SUMMARY ====== -->
+    <section class="pricing" id="pricing">
+      <div class="wrap reveal">
+        <h2 class="section-title">Pro Package Investment</h2>
+        <p class="section-sub">
+          Pricing depends on complexity, integrations and timelines. The Pro package typically starts here:
+        </p>
+
+        <div class="price-card">
+          <h3>Pro Package</h3>
+          <p class="price">R20,000+</p>
+          <p class="desc">
+            For high-growth companies that need custom builds, advanced automation and enterprise-grade UX.
+          </p>
+          <a href="#checkout" class="cta dark">Start Pro Plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CART + CHECKOUT ====== -->
+    <section class="contact" id="checkout">
+      <div class="wrap reveal">
+        <h2 class="section-title">Cart &amp; Checkout Demo</h2>
+        <p class="section-sub">
+          This is a working front-end prototype. In a real project, we’d connect this to a live payment
+          provider and your back office systems.
+        </p>
+
+        <div id="checkout-layout">
+          <!-- CART -->
+          <div class="cart-box">
+            <h3 class="cart-box__title">Your Cart</h3>
+            <p data-cart-empty class="cart-box__empty">
+              Your cart is empty. Add a product from the demo store above.
+            </p>
+
+            <div class="cart-box__table-wrap">
+              <table class="cart-box__table">
+                <thead>
+                  <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Qty</th>
+                    <th>Total</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody data-cart-items></tbody>
+              </table>
+            </div>
+
+            <div class="cart-box__totals">
+              <div>
+                <span>Subtotal</span>
+                <span data-cart-subtotal>R0</span>
+              </div>
+              <div>
+                <span>VAT (15%)</span>
+                <span data-cart-vat>R0</span>
+              </div>
+              <div class="cart-box__grand">
+                <span>Total</span>
+                <span data-cart-total>R0</span>
+              </div>
+            </div>
+
+            <button type="button" class="cta cart-box__cta" data-scroll-to-checkout>
+              Proceed to checkout
+            </button>
+          </div>
+
+          <!-- CHECKOUT FORM -->
+          <div class="checkout-box">
+            <h3 class="checkout-box__title">Checkout</h3>
+            <p class="checkout-box__sub">
+              Fill in your details to simulate a real checkout experience.
+            </p>
+
+            <form id="checkout-form" class="contact-form checkout-box__form">
+              <input type="text" name="name" placeholder="Full name" required>
+              <input type="email" name="email" placeholder="Email address" required>
+              <input type="text" name="company" placeholder="Company name (optional)">
+              <input type="text" name="website" placeholder="Current website URL (optional)">
+              <input type="text" name="budget" placeholder="Estimated budget (optional)">
+              <textarea name="notes" placeholder="Anything specific you’d like us to know about your project?"></textarea>
+              <button type="submit" class="cta">Place demo order</button>
+            </form>
+
+            <div id="checkout-message" class="checkout-box__message"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FAQ (single open) ====== -->
+    <section class="showcase" id="faq">
+      <div class="wrap reveal">
+        <h2 class="section-title">Pro Package FAQs</h2>
+        <p class="section-sub">
+          Common questions clients ask before starting a Pro project.
+        </p>
+
+        <div class="faq-accordion" data-faq-accordion>
+          <details class="faq-item" open>
+            <summary>What actually changes with the Pro package vs smaller plans?</summary>
+            <p>
+              Pro is for complex sites and e-commerce. We include deeper UX work, custom components,
+              advanced tracking, and integrations with the tools you already use (CRM, email, WhatsApp, etc.).
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>How long does a typical Pro build take?</summary>
+            <p>
+              Most Pro builds take 4–8 weeks depending on scope, content readiness and integration complexity.
+              We’ll agree timelines up front in your proposal.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you work with our existing tech stack?</summary>
+            <p>
+              Yes. We regularly integrate with CRMs, marketing platforms, diallers, analytics tools and custom APIs.
+              The Pro package includes time for this integration work.
+            </p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What happens after launch?</summary>
+            <p>
+              We provide a structured handover, training, and a 30-day launch support window.
+              Ongoing retainers are available if you need continuous improvements.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section class="contact" id="contact">
+      <div class="wrap reveal">
+        <h2 class="section-title">Start Your Pro Project</h2>
+        <p class="section-sub">
+          Prefer to talk directly? Use this quick form and we’ll respond with a tailored proposal for your build.
+        </p>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+          <textarea placeholder="Tell us about your project" required></textarea>
+          <button type="submit" class="cta">Submit enquiry</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="wrap site-footer__inner">
+      <div class="site-footer__brand">
+        <div class="site-footer__logo-dot"></div>
+        <div>
+          <p class="site-footer__title">Studio Pro Demo</p>
+          <p class="site-footer__tagline">Demo of a Pro-level e-commerce & automation build.</p>
+        </div>
+      </div>
+
+      <nav class="site-footer__nav">
+        <a href="#features">Features</a>
+        <a href="#process">Process</a>
+        <a href="#products">Demo Store</a>
+        <a href="#checkout">Checkout</a>
+        <a href="#faq">FAQs</a>
+      </nav>
+
+      <p class="site-footer__copy">
+        © 2025 Studio Pro Demo. Built as a showcase — not a real store.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ====== JS: CART, CHECKOUT, FAQ, ANIMATIONS ====== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const cart = [];
+
+      const addButtons = document.querySelectorAll("[data-add-to-cart]");
+      const cartItemsContainer = document.querySelector("[data-cart-items]");
+      const cartEmptyState = document.querySelector("[data-cart-empty]");
+      const subtotalNode = document.querySelector("[data-cart-subtotal]");
+      const vatNode = document.querySelector("[data-cart-vat]");
+      const totalNode = document.querySelector("[data-cart-total]");
+      const checkoutForm = document.getElementById("checkout-form");
+      const checkoutMessage = document.getElementById("checkout-message");
+      const scrollToCheckoutBtn = document.querySelector("[data-scroll-to-checkout]");
+      const checkoutLayout = document.getElementById("checkout-layout");
+
+      function formatCurrency(amount) {
+        return "R" + amount.toLocaleString("en-ZA", {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 0
+        });
+      }
+
+      function updateCartTotals() {
+        let subtotal = 0;
+        cart.forEach(item => {
+          subtotal += item.price * item.qty;
+        });
+        const vat = Math.round(subtotal * 0.15);
+        const total = subtotal + vat;
+
+        subtotalNode.textContent = formatCurrency(subtotal);
+        vatNode.textContent = formatCurrency(vat);
+        totalNode.textContent = formatCurrency(total);
+      }
+
+      function renderCart() {
+        cartItemsContainer.innerHTML = "";
+
+        if (cart.length === 0) {
+          cartEmptyState.style.display = "block";
+        } else {
+          cartEmptyState.style.display = "none";
+        }
+
+        cart.forEach(item => {
+          const tr = document.createElement("tr");
+          tr.setAttribute("data-cart-row", item.id);
+
+          const tdName = document.createElement("td");
+          tdName.textContent = item.name;
+
+          const tdPrice = document.createElement("td");
+          tdPrice.textContent = formatCurrency(item.price);
+
+          const tdQty = document.createElement("td");
+
+          const qtyInput = document.createElement("input");
+          qtyInput.type = "number";
+          qtyInput.min = "1";
+          qtyInput.value = String(item.qty);
+          qtyInput.className = "cart-box__qty-input";
+          qtyInput.addEventListener("change", function () {
+            const newQty = parseInt(this.value, 10);
+            if (!Number.isNaN(newQty) && newQty > 0) {
+              item.qty = newQty;
+            } else {
+              item.qty = 1;
+              this.value = "1";
+            }
+            updateCartTotals();
+            renderCart();
+          });
+
+          tdQty.appendChild(qtyInput);
+
+          const tdTotal = document.createElement("td");
+          tdTotal.textContent = formatCurrency(item.price * item.qty);
+
+          const tdRemove = document.createElement("td");
+          const removeBtn = document.createElement("button");
+          removeBtn.type = "button";
+          removeBtn.textContent = "×";
+          removeBtn.className = "cart-box__remove";
+          removeBtn.addEventListener("click", function () {
+            const index = cart.findIndex(p => p.id === item.id);
+            if (index !== -1) {
+              cart.splice(index, 1);
+              updateCartTotals();
+              renderCart();
+            }
+          });
+          tdRemove.appendChild(removeBtn);
+
+          tr.appendChild(tdName);
+          tr.appendChild(tdPrice);
+          tr.appendChild(tdQty);
+          tr.appendChild(tdTotal);
+          tr.appendChild(tdRemove);
+
+          cartItemsContainer.appendChild(tr);
+        });
+
+        updateCartTotals();
+      }
+
+      function addToCart(productId, name, price) {
+        const existing = cart.find(item => item.id === productId);
+        if (existing) {
+          existing.qty += 1;
+        } else {
+          cart.push({ id: productId, name, price, qty: 1 });
+        }
+        updateCartTotals();
+        renderCart();
+      }
+
+      addButtons.forEach(btn => {
+        btn.addEventListener("click", function () {
+          const productCard = this.closest("[data-product-id]");
+          if (!productCard) return;
+
+          const id = productCard.getAttribute("data-product-id");
+          const name = productCard.getAttribute("data-product-name");
+          const price = parseInt(productCard.getAttribute("data-product-price"), 10);
+
+          if (!id || !name || Number.isNaN(price)) return;
+
+          addToCart(id, name, price);
+        });
+      });
+
+      if (scrollToCheckoutBtn) {
+        scrollToCheckoutBtn.addEventListener("click", function () {
+          const checkoutSection = document.getElementById("checkout");
+          if (checkoutSection) {
+            checkoutSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      }
+
+      if (checkoutForm) {
+        checkoutForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          if (cart.length === 0) {
+            checkoutMessage.style.display = "block";
+            checkoutMessage.classList.remove("checkout-box__message--success");
+            checkoutMessage.classList.add("checkout-box__message--error");
+            checkoutMessage.textContent = "Your cart is empty. Add at least one item from the demo store before placing an order.";
+            return;
+          }
+
+          const formData = new FormData(checkoutForm);
+          const name = formData.get("name") || "there";
+
+          checkoutMessage.style.display = "block";
+          checkoutMessage.classList.remove("checkout-box__message--error");
+          checkoutMessage.classList.add("checkout-box__message--success");
+
+          const totalText = totalNode.textContent || "R0";
+          checkoutMessage.textContent =
+            `Thanks, ${name}! This is a demo, so no real payment was taken, ` +
+            `but this is exactly how your visitors would experience a checkout. ` +
+            `Order total: ${totalText}.`;
+
+          checkoutForm.reset();
+        });
+      }
+
+      // Responsive layout for cart + checkout (stacks on mobile)
+      function updateCheckoutLayout() {
+        if (!checkoutLayout) return;
+        if (window.innerWidth <= 900) {
+          checkoutLayout.style.display = "flex";
+          checkoutLayout.style.flexDirection = "column";
+          checkoutLayout.style.gap = "20px";
+        } else {
+          checkoutLayout.style.display = "grid";
+          checkoutLayout.style.gridTemplateColumns = "minmax(0,1.4fr) minmax(0,1fr)";
+          checkoutLayout.style.alignItems = "flex-start";
+          checkoutLayout.style.gap = "28px";
+        }
+      }
+
+      window.addEventListener("resize", updateCheckoutLayout);
+      updateCheckoutLayout(); // initial
+
+      // ===== FAQ SINGLE-OPEN =====
+      const faqAccordion = document.querySelector("[data-faq-accordion]");
+      if (faqAccordion) {
+        const items = faqAccordion.querySelectorAll(".faq-item");
+        items.forEach((item) => {
+          item.addEventListener("toggle", () => {
+            if (item.open) {
+              items.forEach(other => {
+                if (other !== item) other.open = false;
+              });
+            }
+          });
+        });
+      }
+
+      // ===== SCROLL REVEAL ANIMATIONS =====
+      const revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        revealEls.forEach(el => observer.observe(el));
+      } else {
+        revealEls.forEach(el => el.classList.add("is-visible"));
+      }
+
+      // Initial cart render
+      renderCart();
+    });
+  </script>
+
+</body>
+</html>
