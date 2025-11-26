@@ -25,7 +25,20 @@
         <div class="site-header__logo-dot"></div>
         <span class="site-header__brand-name">Studio Pro Demo</span>
       </div>
-      <nav class="site-header__nav">
+
+      <!-- Hamburger toggle (mobile) -->
+      <button
+        id="nav-toggle"
+        class="site-header__toggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-nav" class="site-header__nav">
         <a href="#features">Features</a>
         <a href="#process">Process</a>
         <a href="#products">Demo Store</a>
@@ -39,7 +52,7 @@
 
   <main>
 
-    <!-- ====== NEW HERO ====== -->
+    <!-- ====== PRO HERO ====== -->
     <section class="hero hero-pro">
       <div class="wrap hero-pro__grid">
         <div class="hero-pro__copy reveal">
@@ -181,40 +194,39 @@
     </section>
 
     <!-- ====== VISUAL SHOWCASE ====== -->
-  <section class="showcase" id="showcase">
-  <div class="wrap reveal">
-    <h2 class="section-title">High-end Visual Direction</h2>
-    <p class="section-sub">
-      Clean, modern, conversion-focused layouts that feel premium and trustworthy on desktop and mobile.
-    </p>
+    <section class="showcase" id="showcase">
+      <div class="wrap reveal">
+        <h2 class="section-title">High-end Visual Direction</h2>
+        <p class="section-sub">
+          Clean, modern, conversion-focused layouts that feel premium and trustworthy on desktop and mobile.
+        </p>
 
-    <div class="showcase-grid">
+        <div class="showcase-grid">
 
-      <!-- Large image -->
-      <div class="showcase-card large">
-        <img
-          src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
-          alt="Web design mockups on a desk">
+          <!-- Large image -->
+          <div class="showcase-card large">
+            <img
+              src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
+              alt="Web design mockups on a desk">
+          </div>
+
+          <!-- Gradient image -->
+          <div class="showcase-card">
+            <img
+              src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
+              alt="Modern gradient shapes and colours">
+          </div>
+
+          <!-- Team collaboration -->
+          <div class="showcase-card">
+            <img
+              src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
+              alt="Team working together in an office">
+          </div>
+
+        </div>
       </div>
-
-      <!-- New working gradient image -->
-      <div class="showcase-card">
-        <img
-          src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
-          alt="Modern gradient shapes and colours">
-      </div>
-
-      <!-- Team collaboration -->
-      <div class="showcase-card">
-        <img
-          src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&amp;fit=crop&amp;w=1200&amp;q=60"
-          alt="Team working together in an office">
-      </div>
-
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- ====== DEMO STORE ====== -->
     <section class="features" id="products">
@@ -495,7 +507,7 @@
     </div>
   </footer>
 
-  <!-- ====== JS: CART, CHECKOUT, FAQ, ANIMATIONS ====== -->
+  <!-- ====== JS: CART, CHECKOUT, FAQ, ANIMATIONS, NAV ====== -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const cart = [];
@@ -717,6 +729,29 @@
 
       // Initial cart render
       renderCart();
+
+      // ===== MOBILE NAV TOGGLE =====
+      const navToggle = document.getElementById("nav-toggle");
+      const primaryNav = document.getElementById("primary-nav");
+
+      if (navToggle && primaryNav) {
+        navToggle.addEventListener("click", () => {
+          const isOpen = primaryNav.classList.toggle("is-open");
+          navToggle.classList.toggle("is-active", isOpen);
+          navToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        // Close on link click (mobile)
+        primaryNav.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            if (primaryNav.classList.contains("is-open")) {
+              primaryNav.classList.remove("is-open");
+              navToggle.classList.remove("is-active");
+              navToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      }
     });
   </script>
 
